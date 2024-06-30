@@ -1,0 +1,25 @@
+.eye {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    border: 3px solid orange;
+    background-image: radial-gradient(black, red, yellow);
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+    &::after {
+      content: "";
+      width: 10px;
+      height: 76px;
+      border: 3px solid orange;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      rotate: -45deg;
+      left: 50%;
+      margin-top: -38px;
+      margin-left: -5px;
+    }
+  }
