@@ -5,14 +5,3 @@ $color-accent-light: #fefff0;
 $color-accent-red: #be0303;
 
 
-/*All parts of main will have the same background color. */
-main .container {
-    background-color: $color-accent-light;
-    border: 5px solid $color-secondary;
-}
-
-/*The How It Works and Steps to Contribute section can use the red-border class*/
-.red-border {
-    border: 5px solid $color-accent-red;
-}
-

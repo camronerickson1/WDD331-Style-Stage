@@ -3,43 +3,6 @@
   src: url("/fonts/ringbearer-font/RingbearerMedium-51mgZ.ttf") format("truetype");
   /* Add other font properties here (e.g., font-weight, font-style) */
 }
-.eye {
-  display: block;
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  background-color: orange;
-  border: 3px solid orange;
-  background-image: radial-gradient(black, red, yellow);
-  border-radius: 100% 0px;
-  transform: rotate(45deg);
-}
-.eye::after {
-  content: "";
-  width: 10px;
-  height: 76px;
-  border: 3px solid orange;
-  background-color: black;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  rotate: -45deg;
-  left: 50%;
-  margin-top: -38px;
-  margin-left: -5px;
-}
-
-/*All parts of main will have the same background color. */
-main .container {
-  background-color: #fefff0;
-  border: 5px solid #fdbe21;
-}
-
-/*The How It Works and Steps to Contribute section can use the red-border class*/
-.red-border {
-  border: 5px solid #be0303;
-}
-
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
