@@ -1,0 +1,41 @@
+// this is the spotlight page
+@import "./theme";
+
+#about .container:nth-of-type(2) {
+  max-width: 80%;
+  background-color: $bground;
+  border: 7.5px ridge $yellow;
+  border-radius: 10%;
+  margin: auto;
+  overflow: hidden;
+
+  h2 {
+    background-image: linear-gradient(
+      180deg,
+      $lightyellow,
+      $yellow,
+      $darkeryellow
+    );
+    border-bottom: 5px ridge $yellow;
+    border-radius: 15%;
+    text-align: center;
+    padding: 1em;
+  }
+
+  p {
+    text-align: center;
+
+    &:first-of-type {
+      width: 30em;
+      background-color: rgb(255, 255, 135);
+      border: 3px solid rgb(255, 255, 109);
+      border-radius: 100%;
+      padding: 2em;
+      margin: 1em auto;
+    }
+
+    &:nth-of-type(2) {
+      font-size: 1.2em;
+    }
+  }
+}

@@ -190,12 +190,12 @@ nav ul {
   //changes back gradient of ring on hover
   & li:hover {
     animation-name: spinningOuter;
-    animation-duration: 5s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
 
     &::after {
       animation-name: spinningOuter;
-      animation-duration: 5s;
+      animation-duration: 1s;
       animation-iteration-count: infinite;
     }
   }

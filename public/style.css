@@ -160,12 +160,12 @@ nav ul li:nth-of-type(3):not(li:nth-of-type(5)), nav ul li:nth-of-type(5):not(li
 }
 nav ul li:hover {
   animation-name: spinningOuter;
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 nav ul li:hover::after {
   animation-name: spinningOuter;
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 nav ul a {
@@ -180,6 +180,36 @@ nav ul a {
   text-decoration: none;
   padding: 1.3em 0em;
   z-index: 1;
+}
+
+#about .container:nth-of-type(2) {
+  max-width: 80%;
+  background-color: #FFFBF1;
+  border: 7.5px ridge #ffdc84;
+  border-radius: 10%;
+  margin: auto;
+  overflow: hidden;
+}
+#about .container:nth-of-type(2) h2 {
+  background-image: linear-gradient(180deg, #FFEBA2, #ffdc84, #FDBE21);
+  border-bottom: 5px ridge #ffdc84;
+  border-radius: 15%;
+  text-align: center;
+  padding: 1em;
+}
+#about .container:nth-of-type(2) p {
+  text-align: center;
+}
+#about .container:nth-of-type(2) p:first-of-type {
+  width: 30em;
+  background-color: rgb(255, 255, 135);
+  border: 3px solid rgb(255, 255, 109);
+  border-radius: 100%;
+  padding: 2em;
+  margin: 1em auto;
+}
+#about .container:nth-of-type(2) p:nth-of-type(2) {
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */
