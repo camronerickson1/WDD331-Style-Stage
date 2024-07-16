@@ -188,6 +188,9 @@ nav ul a {
     display: block;
     margin: auto;
   }
+  nav ul li {
+    margin: 1.5em auto;
+  }
   nav ul li:nth-of-type(3), nav ul li:nth-of-type(5) {
     margin-top: 0;
   }
