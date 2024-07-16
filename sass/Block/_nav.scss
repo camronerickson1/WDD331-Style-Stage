@@ -81,7 +81,7 @@
 }
 
 nav ul {
-  width: 600px;
+  max-width: 600px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 3em auto;
@@ -97,7 +97,6 @@ nav ul {
       $yellow,
       $darkeryellow
     );
-    border: 3px outset $yellow;
     border-radius: 100%;
     position: absolute;
     top: 0;
@@ -110,7 +109,7 @@ nav ul {
   & li {
     position: relative;
     width: 160px;
-    height: 60px;
+    height: 50px;
     list-style-type: none;
     border-radius: 100%;
     text-align: center;
@@ -130,7 +129,7 @@ nav ul {
     border: 5px solid $lightyellow;
     border-radius: 100%;
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 10px;
     padding: 2.5em 0.5em;
   }
@@ -173,15 +172,29 @@ nav ul {
   // styling the white insides, black text, and inner gradient
   & a {
     position: absolute; //puts the white in place relative to li
-    top: 30px;
-    left: 28px;
+    top: 25px;
+    left: 27px;
     width: 130px;
     height: 30px;
     background-color: $white;
     color: $black;
     border-radius: 100%;
     text-decoration: none;
-    padding: 1.3em 0;
+    padding: 1.2em 0;
     z-index: 1; //puts the white on top
+  }
+}
+
+@media (max-width: 580px) {
+  nav ul {
+    max-width: 580px;
+    width: 90%;
+    display: block;
+    margin: auto;
+
+    & li:nth-of-type(3),
+    & li:nth-of-type(5) {
+      margin-top: 0;
+    }
   }
 }
