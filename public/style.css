@@ -1,4 +1,12 @@
 @import url("../public/RingbearerMedium-51mgZ.ttf");
+@font-face {
+  font-family: ringbearer;
+  src: url("../public/RingbearerMedium-51mgZ.ttf");
+}
+* {
+  font-family: ringbearer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +21,7 @@ header p, header a {
   font-size: 14px;
 }
 header a {
-  color: #FEFFF0;
+  color: #fffffb;
 }
 header svg {
   width: 20px;
@@ -21,27 +29,157 @@ header svg {
   filter: sepia(1) brightness(100);
 }
 
+@keyframes spinningOuter {
+  0% {
+    background-image: linear-gradient(135deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  10% {
+    background-image: linear-gradient(171, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  20% {
+    background-image: linear-gradient(207deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  30% {
+    background-image: linear-gradient(243deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  40% {
+    background-image: linear-gradient(279deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  50% {
+    background-image: linear-gradient(315deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  60% {
+    background-image: linear-gradient(351deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  70% {
+    background-image: linear-gradient(387deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  80% {
+    background-image: linear-gradient(23deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  90% {
+    background-image: linear-gradient(59deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+  100% {
+    background-image: linear-gradient(95deg, #FFEBA2, #ffdc84, #FDBE21);
+  }
+}
+@keyframes spinningInner {
+  0% {
+    background-image: linear-gradient(135deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  10% {
+    background-image: linear-gradient(171, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  20% {
+    background-image: linear-gradient(207deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  30% {
+    background-image: linear-gradient(243deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  40% {
+    background-image: linear-gradient(279deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  50% {
+    background-image: linear-gradient(315deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  60% {
+    background-image: linear-gradient(351deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  70% {
+    background-image: linear-gradient(387deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  80% {
+    background-image: linear-gradient(23deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  90% {
+    background-image: linear-gradient(59deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+  100% {
+    background-image: linear-gradient(95deg, #FDBE21, #ffdc84, #FFEBA2);
+  }
+}
 nav ul {
-  width: 420px;
+  width: 600px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 3em auto;
 }
-nav ul li {
-  list-style-type: none;
-  background-image: linear-gradient(45deg, #FFEBA2, #ffdc84, #ffdc84, #FDBE21, #FDBE21, #ffdc84, #FDBE21);
+nav ul li::before {
+  width: 160px;
+  height: 40px;
+  content: "";
+  background-image: linear-gradient(135deg, #FFEBA2, #ffdc84, #FDBE21);
   border: 3px outset #ffdc84;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2.5em 0.5em;
+  z-index: -1;
+}
+nav ul li {
+  position: relative;
+  width: 160px;
+  height: 40px;
+  list-style-type: none;
   border-radius: 100%;
   text-align: center;
   padding: 2.5em 0.5em;
 }
+nav ul li::after {
+  content: "";
+  width: 130px;
+  height: 5px;
+  background-image: linear-gradient(135deg, #FDBE21, #ffdc84, #FFEBA2);
+  border: 5px solid #FFEBA2;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 2.5em 0.5em;
+}
+nav ul li:first-of-type, nav ul li:nth-of-type(4) {
+  grid-column: 2/3;
+}
+nav ul li:first-of-type:not(li:first-of-type), nav ul li:nth-of-type(4):not(li:first-of-type) {
+  grid-row: 4/5;
+}
+nav ul li:nth-of-type(2), nav ul li:nth-of-type(6) {
+  grid-row: 2/3;
+}
+nav ul li:nth-of-type(2):not(li:nth-of-type(6)), nav ul li:nth-of-type(6):not(li:nth-of-type(6)) {
+  grid-column: 3/4;
+}
+nav ul li:nth-of-type(3), nav ul li:nth-of-type(5) {
+  margin-top: 3em;
+  grid-row: 3/4;
+}
+nav ul li:nth-of-type(3):not(li:nth-of-type(5)), nav ul li:nth-of-type(5):not(li:nth-of-type(5)) {
+  grid-column: 3/4;
+}
+nav ul li:hover {
+  animation-name: spinningOuter;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+nav ul li:hover::after {
+  animation-name: spinningOuter;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
 nav ul a {
-  background-color: white;
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  width: 130px;
+  height: 30px;
+  background-color: #fffffb;
   color: #0F0F00;
-  border: 3px inset #ffdc84;
   border-radius: 100%;
   text-decoration: none;
-  padding: 1.3em 2em;
+  padding: 1.3em 0em;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
