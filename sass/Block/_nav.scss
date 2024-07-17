@@ -164,7 +164,7 @@ nav ul {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     &::after {
-      animation-name: spinningOuter;
+      animation-name: spinningInner;
       animation-duration: 1s;
       animation-iteration-count: infinite;
     }
