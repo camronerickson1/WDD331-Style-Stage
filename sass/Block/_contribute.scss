@@ -1,5 +1,5 @@
 #contribute {
-    width: auto;
+    width: 96%;
     background-color: $bground;
     border: 7.5px ridge $yellow;
     border-radius: 10%;
@@ -19,5 +19,10 @@
     border-radius: 20px;
     text-align: center;
     padding: 1em;
+    }
+
+    & p, h3, ol {
+      padding: 1em;
+      list-style: none;
     }
 }
