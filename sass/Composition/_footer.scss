@@ -3,18 +3,13 @@
  .page-footer {
   margin: 0;
   background-color: $black;
-  color: $white;
   --logomark-padding: 0;
- 
-//    position: relative;
    padding: 3rem 1rem;
-//    background-color: red;
-//    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d2fbf7' fill-opacity='1'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-//    background-repeat: repeat-x;
-//    background-position: center -34px;
+
   .container{
     display: grid;
-    grid-template-columns: 70% 1fr 
+    grid-template-columns: 70% 1fr;
+    color: $lightyellow;
   };
 
   ul{
@@ -28,7 +23,7 @@
 
    li a svg{
     height: 1em;
-    fill: $lightyellow
+    fill: $darkeryellow;
   };
 
 //   p:first-child {
@@ -38,15 +33,44 @@
 //     text-align: center;
 //   }
 
-//   p a {
-//     color: inherit;
-//   }
+  p a {
+    color: $darkeryellow;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
-//   ul {
-//     grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
-//   }
+  p:nth-of-type(3){
+    text-align: center;
+    grid-column: 1/3;
+    padding: 2em 0 1em;
+    width: 100%;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
-//   .container > :last-child {
-//     margin-bottom: 0;
-//   }
+}
+
+@media (max-width: 580px) {
+  .page-footer .container{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 1040px) {
+  .page-footer > .container {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+
+    p{
+      margin-bottom: 1em;
+    };
+
+    p:nth-of-type(3){
+      grid-column: 1;
+    }
+  }
+
+    
 }

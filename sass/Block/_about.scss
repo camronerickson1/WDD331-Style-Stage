@@ -76,13 +76,14 @@
   }
 }
 
-#about .container:nth-of-type(2) {
+#about .container {
   width: 96%;
   background-color: $bground;
   border: 7.5px ridge $yellow;
   border-radius: 10%;
-  margin: auto;
+  margin:  3em auto;
   overflow: hidden;
+
 
   & h2 {
     background-image: linear-gradient(
@@ -98,16 +99,18 @@
   }
 
   & p {
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
 
-    &:first-of-type {
-      max-width: 30em;
-      background-color: rgb(255, 255, 135);
-      border: 3px solid rgb(255, 255, 109);
-      border-radius: 100%;
-      padding: 2em;
-      margin: 1em auto;
-    }
+      &:first-of-type {
+        max-width: 30em;
+        background-color: rgb(255, 255, 135);
+        border: 3px solid rgb(255, 255, 109);
+        border-radius: 100%;
+        padding: 2em;
+        margin: 1em auto;
+      }
+
 
     &:nth-of-type(2) {
       font-size: 1.2em;
@@ -122,6 +125,7 @@
     &:last-of-type a {
       color: black;
     }
+
   }
 
   & ul {
@@ -199,6 +203,7 @@
         animation-iteration-count: infinite;
       
     }
+
   }
 
   @media (max-width: 580px) {
