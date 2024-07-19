@@ -5,6 +5,8 @@
     border-radius: 10%;
     margin:  3em auto;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 
     & h2 {
         background-image: linear-gradient(

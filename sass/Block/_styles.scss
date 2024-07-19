@@ -6,6 +6,8 @@
     margin: 10px auto;
     overflow: hidden;
     position: relative;
+    z-index: 1;
+    background-color: $bground;
     width: 60%;
     & h2 {
         background-image: linear-gradient(

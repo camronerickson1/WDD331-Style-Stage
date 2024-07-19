@@ -6,10 +6,11 @@
     background-color: $bground;
     border: 7.5px ridge $yellow;
     border-radius: 10%;
-    margin: 10px;
     overflow: hidden;
+    width: 96%;
+    margin: 3em auto;
     & p, h3 {
-    padding: 10px;   
+    padding: 1em;   
     }
     & h2 {
         background-image: linear-gradient(
